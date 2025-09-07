@@ -138,7 +138,7 @@ int main(){
     printf("'%s' to '%s': %d operations\n", test1, test2, 
            recursiveMinStrDiff(test1, test2, strlen(test1), strlen(test2)));
     
-    char test3[] = "sunday";
+    char test3[] = "sundayi";
     char test4[] = "saturday";
     printf("'%s' to '%s': %d operations\n", test3, test4,
            recursiveMinStrDiff(test3, test4, strlen(test3), strlen(test4)));
