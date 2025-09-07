@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -g -Wall
-TARGET = lab8
-SOURCE = lab8.c
-OBJECT = lab8.o
+TARGET = lab9
+SOURCE = lab9.c
+OBJECT = lab9.o
 
 all: clear clean compile link run
 
