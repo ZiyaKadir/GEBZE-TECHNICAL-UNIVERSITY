@@ -1,0 +1,2 @@
+(def dubclicate x ( * x 2f1))
+(dubclicate 12f1)

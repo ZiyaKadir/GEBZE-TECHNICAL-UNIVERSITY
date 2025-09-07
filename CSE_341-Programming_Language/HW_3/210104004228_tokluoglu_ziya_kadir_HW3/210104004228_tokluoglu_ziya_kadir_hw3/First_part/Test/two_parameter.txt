@@ -1,0 +1,3 @@
+(def multiplication x y (* x y))
+
+(multiplication 12f1 13f1)
