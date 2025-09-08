@@ -1,0 +1,31 @@
+void setup() {
+
+  
+Serial.begin(9600);
+Serial.println("The homework of CSE 101");
+Serial.write(90);
+Serial.write(105);
+Serial.write(121);
+Serial.write(97);
+Serial.write(32);
+Serial.write(75);
+Serial.write(97);
+Serial.write(100);
+Serial.write(105);
+Serial.write(114);
+Serial.write(32);
+Serial.write(84);
+Serial.write(111);
+Serial.write(107);
+Serial.write(108);
+Serial.write(117);
+Serial.write(111);
+Serial.write(103);
+Serial.write(108);
+Serial.write(117);
+Serial.println();
+}
+
+void loop() {
+
+}
