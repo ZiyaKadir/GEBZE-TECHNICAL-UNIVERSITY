@@ -1,0 +1,35 @@
+* SPICE3 file created from HW_1_NOR.ext - technology: scmos
+
+.option scale=0.12u
+.include tsmc_cmos025
+
+.model nfet NMOS
+.model pfet PMOS
+
+Vdd VDD 0 2.5V
+Vina A 0 PULSE(0 2.5 0ns 10ns 10ns 20ns 40ns)
+Vinb B 0 PULSE(0 2.5 0ns 20ns 20ns 40ns 80ns)
+CL Y 0 1fF
+.TRAN 1ns 400ns
+
+
+M1000 Y A GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1001 a_n3_26# A VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1002 Y B a_n3_26# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1003 GND B Y Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+C0 VDD Y 0.064113f
+C1 A B 0.362349f
+C2 B Y 0.099985f
+C3 A Y 0.002371f
+C4 GND Y 0.13863f
+C5 VDD B 0.040828f
+C6 VDD A 0.04104f
+C7 GND 0 0.219423f 
+C8 Y 0 0.431551f 
+C9 B 0 0.522764f 
+C10 A 0 0.51552f 
+C11 VDD 0 0.857744f 

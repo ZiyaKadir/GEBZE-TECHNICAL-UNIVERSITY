@@ -1,0 +1,167 @@
+* SPICE3 file created from n1.ext - technology: scmos
+
+.option scale=10n
+.include tsmc_cmos025
+.model nfet NMOS
+.model pfet PMOS
+
+* Voltage sources and input pulse
+Vdd VDD 0 2.5V
+*Vgnd GND 0 0V
+* VinA a 0 DC 0 PULSE(0 2.5 35ns 5ns 5ns 35ns 80ns)
+* VinB b 0 DC 0 PULSE(0 2.5 15ns 5ns 5ns 15ns 40ns)
+VinS2 S2 0 DC 0 PULSE(0 2.5 3190ns 10ns 10ns 3190ns 6400ns)
+VinS1 S1 0 DC 0 PULSE(0 2.5 1590ns 10ns 10ns 1590ns 3200ns)
+VinS0 S0 0 DC 0 PULSE(0 2.5 790ns 10ns 10ns 790ns 1600ns)
+Vinrst RST 0 DC 0 PULSE(0 2.5 390ns 10ns 10ns 390ns 800ns)
+VinREQ REQ 0 DC 0 PULSE(0 2.5 190ns 10ns 10ns 190ns 400ns)
+VinT T 0 DC 0 PULSE(0 2.5 90ns 10ns 10ns 90ns 200ns)
+cikti1 N1 0 1fF
+cikti2 N2 0 1fF
+* cikti2 g 0 1fF
+* cikti2 y 0 1fF
+.TRAN 1ns 4000ns
+* plot V(S2) V(S1)+0.1 V(S0)+0.2 V(RST)+3 V(REQ)+6 V(T)+9 V(N1)+12 V(N0) +12
+
+M1000 VDD S0 a_54_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1001 GND a_n25_114# a_307_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1002 a_355_114# a_331_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1003 a_166_178# a_142_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1004 VDD a_30_114# a_231_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1005 a_n65_114# S2 GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1006 a_54_114# T GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1007 a_94_114# a_78_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1008 a_166_114# a_94_114# a_166_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1009 a_n25_114# S1 GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1010 a_291_114# a_267_178# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1011 a_231_114# a_n25_114# GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1012 a_54_178# S0 a_54_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1013 a_118_114# S0 GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1014 a_231_178# a_30_114# a_231_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1015 a_307_178# a_291_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1016 a_379_114# a_355_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1017 GND a_n41_114# N0 Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1018 a_307_114# a_n25_114# a_307_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1019 GND REQ a_331_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1020 a_78_114# a_54_178# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1021 GND a_n41_114# N1 Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1022 VDD S0 a_267_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1023 a_n8_178# T a_n8_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1024 a_142_114# a_118_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1025 a_404_178# a_379_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1026 GND a_n25_114# a_94_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1027 a_331_178# S0 VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1028 a_n8_114# a_n25_114# GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1029 GND a_231_178# a_355_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1030 a_n41_114# a_n65_114# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1031 a_331_114# REQ a_331_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1032 N0 a_n41_114# a_404_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1033 a_267_114# a_30_114# GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1034 a_191_178# a_166_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1035 a_267_178# S0 a_267_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1036 a_30_114# T VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1037 N1 a_n41_114# a_191_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1038 VDD T a_n8_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1039 a_166_114# a_142_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1040 a_n65_114# RST a_n65_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1041 a_355_178# a_331_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1042 GND REQ a_118_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1043 a_94_178# a_78_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1044 a_355_114# a_231_178# a_355_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1045 a_291_114# a_267_178# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1046 GND a_307_114# a_379_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1047 a_n65_178# S2 VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1048 a_n25_114# S1 VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1049 a_54_178# T VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1050 a_307_114# a_291_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1051 a_94_114# a_n25_114# a_94_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1052 a_118_178# S0 VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1053 a_231_178# a_n25_114# VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1054 GND RST a_n65_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1055 a_118_114# REQ a_118_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1056 a_379_178# a_355_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1057 GND a_n8_178# a_142_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1058 a_379_114# a_307_114# a_379_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1059 N0 a_379_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1060 a_78_114# a_54_178# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1061 a_142_178# a_118_114# VDD VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1062 a_331_114# S0 GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1063 a_n41_114# a_n65_114# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1064 a_n8_178# a_n25_114# VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1065 a_30_114# T GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1066 GND a_94_114# a_166_114# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1067 N1 a_166_114# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1068 a_142_114# a_n8_178# a_142_178# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1069 a_267_178# a_30_114# VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+C0 a_n25_114# a_n41_114# 3.60055f
+

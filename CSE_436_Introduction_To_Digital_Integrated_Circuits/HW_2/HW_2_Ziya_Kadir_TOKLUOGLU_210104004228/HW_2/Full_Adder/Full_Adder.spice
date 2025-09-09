@@ -1,0 +1,142 @@
+* SPICE3 file created from Full_Adder.ext - technology: scmos
+
+.option scale=0.12u
+.include tsmc_cmos025
+.model nfet NMOS
+.model pfet PMOS
+
+Vdd VDD 0 2.5V
+Vinb A  0 PULSE(0 2.5 700ns 100ns 100ns 700ns 1600ns)
+Vina B  0 PULSE(0 2.5 300ns 100ns 100ns 300ns 800ns)
+Vinc C  0 PULSE(0 2.5 100ns 100ns 100ns 100ns 400ns)
+CL1 Sum  0 1fF
+CL2 Cout 0 1fF
+.TRAN 1ns 1600ns
+
+M1000 a_46_75# a_28_11# a_36_39# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1001 GND B a_50_8# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1002 a_92_75# a_36_39# VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1003 a_4_75# B a_4_11# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1004 a_28_11# a_4_75# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1005 VDD a_92_75# Cout VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1006 a_138_8# a_36_39# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1007 VDD a_138_8# a_134_75# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1008 a_70_75# A a_50_8# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1009 a_4_11# A GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1010 a_92_75# C a_92_11# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1011 VDD a_50_8# a_46_75# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1012 a_134_75# a_116_11# Sum VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1013 GND C a_138_8# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1014 a_116_11# a_92_75# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1015 a_92_11# a_36_39# GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1016 VDD B a_70_75# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1017 a_36_39# a_28_11# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1018 a_28_11# a_4_75# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1019 a_158_75# a_36_39# a_138_8# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1020 GND a_92_75# a_182_11# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1021 VDD B a_4_75# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1022 GND a_138_8# Sum Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1023 VDD C a_92_75# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1024 a_50_8# A GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1025 a_4_75# A VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1026 GND a_50_8# a_36_39# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1027 a_182_11# a_4_75# Cout Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1028 Cout a_4_75# VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1029 VDD C a_158_75# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1030 Sum a_116_11# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1031 a_116_11# a_92_75# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+C0 a_36_39# a_28_11# 0.493565f
+C1 C a_4_75# 0.882736f
+C2 a_138_8# VDD 0.166884f
+C3 a_92_75# GND 0.078301f
+C4 C VDD 0.083584f
+C5 a_36_39# A 0.021357f
+C6 a_50_8# B 0.021915f
+C7 a_50_8# GND 0.139275f
+C8 a_116_11# Sum 0.493071f
+C9 B a_28_11# 0.020034f
+C10 a_36_39# Sum 0.018047f
+C11 a_116_11# a_138_8# 0.343278f
+C12 a_28_11# GND 0.139221f
+C13 A B 0.664658f
+C14 VDD a_4_75# 0.334466f
+C15 C a_116_11# 0.020034f
+C16 a_36_39# a_138_8# 0.169173f
+C17 A GND 0.12545f
+C18 Cout GND 0.077011f
+C19 a_36_39# C 0.664661f
+C20 Sum GND 0.13863f
+C21 a_116_11# a_4_75# 0.015959f
+C22 a_138_8# GND 0.139275f
+C23 a_36_39# a_4_75# 0.019853f
+C24 a_116_11# VDD 0.197373f
+C25 a_50_8# a_28_11# 0.343278f
+C26 C GND 0.001079f
+C27 a_92_75# Cout 0.095841f
+C28 a_50_8# A 0.169173f
+C29 a_36_39# VDD 0.147139f
+C30 a_92_75# Sum 0.015757f
+C31 A a_28_11# 0.021461f
+C32 B a_4_75# 0.9613f
+C33 a_92_75# a_138_8# 0.016704f
+C34 a_4_75# GND 0.07809f
+C35 VDD B 0.083584f
+C36 C a_92_75# 0.095016f
+C37 a_36_39# a_116_11# 0.021461f
+C38 a_92_75# a_4_75# 1.11465f
+C39 a_138_8# Cout 0.013193f
+C40 a_116_11# GND 0.139221f
+C41 a_92_75# VDD 0.334466f
+C42 a_36_39# B 0.020319f
+C43 a_50_8# a_4_75# 0.016624f
+C44 a_36_39# GND 0.264247f
+C45 a_50_8# VDD 0.166884f
+C46 a_138_8# Sum 0.0644f
+C47 a_4_75# a_28_11# 0.275412f
+C48 C Sum 0.017697f
+C49 VDD a_28_11# 0.197373f
+C50 A a_4_75# 0.095209f
+C51 C a_138_8# 0.021915f
+C52 a_92_75# a_116_11# 0.171944f
+C53 B GND 0.001079f
+C54 a_4_75# Cout 0.090372f
+C55 VDD A 0.083025f
+C56 a_36_39# a_92_75# 0.081772f
+C57 VDD Cout 0.248945f
+C58 a_50_8# a_36_39# 0.085892f
+C59 Sum a_4_75# 0.015829f
+C60 a_138_8# a_4_75# 0.016414f
+C61 Sum VDD 0.064113f
+

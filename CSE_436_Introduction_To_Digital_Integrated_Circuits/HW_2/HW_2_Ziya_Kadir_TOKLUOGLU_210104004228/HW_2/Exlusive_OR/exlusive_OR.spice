@@ -1,0 +1,74 @@
+* SPICE3 file created from exlusive_OR.ext - technology: scmos
+
+.option scale=0.12u
+.include tsmc_cmos025
+.model nfet NMOS
+.model pfet PMOS
+
+Vdd VDD 0 2.5V
+Vinb A 0 PULSE(0 2.5 300ns 100ns 100ns 300ns 800ns)
+Vina B 0 PULSE(0 2.5 100ns 100ns 100ns 100ns 400ns)
+CL Y 0 1fF
+.TRAN 1ns 2000ns
+
+M1000 VDD B a_12_71# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1001 a_78_71# A a_58_4# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1002 GND a_58_4# Y Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1003 a_12_71# A VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1004 a_58_4# A GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1005 VDD B a_78_71# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1006 a_36_7# a_12_71# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1007 a_36_7# a_12_71# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1008 Y a_36_7# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1009 VDD a_58_4# a_54_71# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1010 a_12_7# A GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1011 a_54_71# a_36_7# Y VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1012 GND B a_58_4# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1013 a_12_71# B a_12_7# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+C0 VDD a_12_71# 0.292269f
+C1 a_36_7# a_12_71# 0.270783f
+C2 A B 0.664668f
+C3 a_58_4# A 0.169173f
+C4 Y A 0.018047f
+C5 VDD A 0.083025f
+C6 a_36_7# A 0.021461f
+C7 a_58_4# B 0.022195f
+C8 Y B 0.017998f
+C9 a_58_4# Y 0.0644f
+C10 VDD B 0.083584f
+C11 a_58_4# VDD 0.166884f
+C12 VDD Y 0.064113f
+C13 a_36_7# B 0.020314f
+C14 a_58_4# a_36_7# 0.343278f
+C15 a_36_7# Y 0.493071f
+C16 a_12_71# GND 0.077656f
+C17 a_36_7# VDD 0.197373f
+C18 A GND 0.12545f
+C19 B GND 0.001079f
+C20 a_58_4# GND 0.139275f
+C21 Y GND 0.13863f
+C22 A a_12_71# 0.030629f
+C23 a_36_7# GND 0.139221f
+C24 a_12_71# B 0.092942f
+C25 GND 0 0.759244f 
+C26 Y 0 0.340299f 
+C27 a_58_4# 0 0.9079f 
+C28 a_36_7# 0 0.790116f 
+C29 a_12_71# 0 1.17588f 
+C30 B 0 1.21244f 
+C31 A 0 1.20375f 
+C32 VDD 0 2.77301f 

@@ -1,0 +1,27 @@
+* SPICE3 file created from HW_1_inverter.ext - technology: scmos
+
+.option scale=0.12u
+
+.include tsmc_cmos025
+
+.model nfet NMOS
+.model pfet PMOS
+
+Vdd VDD 0 2.5V
+Vin A 0 PULSE(0 2.5 0ns 10ns 10ns 20ns 40ns)
+CL Y 0 1fF
+.TRAN 1ns 200ns
+
+
+M1000 Y A GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1001 Y A VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+C0 VDD A 0.043324f
+C1 Y GND 0.092402f
+C2 Y A 0.051457f
+C3 VDD Y 0.156544f
+C4 GND 0 0.130969f 
+C5 Y 0 0.373298f 
+C6 A 0 0.696047f 
+C7 VDD 0 0.678476f 

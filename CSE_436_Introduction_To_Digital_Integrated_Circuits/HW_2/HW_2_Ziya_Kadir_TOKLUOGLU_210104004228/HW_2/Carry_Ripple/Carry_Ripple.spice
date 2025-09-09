@@ -1,0 +1,204 @@
+* SPICE3 file created from Carry_Ripple.ext - technology: scmos
+
+.option scale=0.12u
+.include tsmc_cmos025
+.model nfet NMOS
+.model pfet PMOS
+
+Vdd VDD 0 2.5V
+Vina0 A1 0 PULSE(0 2.5 1500ns 100ns 100ns 1500ns 3200ns)
+Vinb0 A0 0 PULSE(0 2.5 700ns  100ns 100ns 700ns 1600ns)
+Vina1 B1 0 PULSE(0 2.5 300ns  100ns 100ns 300ns 800ns)
+Vinb1 B0 0 PULSE(0 2.5 100ns  100ns 100ns 100ns 400ns)
+
+CL1 Cout  0 1fF
+CL2 Sum2  0 1fF
+CL3 Sum1  0 1fF
+
+
+
+.TRAN 1ns 3200ns
+
+
+M1000 a_9_79# A0 VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1001 a_185_15# a_129_37# GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1002 VDD B1 a_163_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1003 a_129_37# a_121_15# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1004 a_121_15# a_97_79# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1005 VDD B1 a_97_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1006 a_227_79# a_209_15# Sum2 VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1007 GND B0 a_55_12# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1008 GND a_33_15# a_231_12# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1009 a_51_79# a_33_15# Sum1 VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1010 a_209_15# a_185_79# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1011 a_97_79# A1 VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1012 Cout a_97_79# VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1013 a_33_15# a_9_79# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1014 a_163_79# A1 a_143_12# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1015 a_143_12# A1 GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1016 a_9_79# B0 a_9_15# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1017 GND a_143_12# a_129_37# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1018 a_251_79# a_129_37# a_231_12# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1019 GND a_185_79# a_275_15# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1020 a_9_15# A0 GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1021 a_55_12# A0 GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1022 VDD a_55_12# a_51_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1023 VDD a_231_12# a_227_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1024 a_139_79# a_121_15# a_129_37# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1025 GND B1 a_143_12# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1026 a_185_79# a_129_37# VDD VDD pfet w=8 l=2
++  ad=24p pd=14u as=40p ps=26u
+M1027 a_121_15# a_97_79# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1028 a_275_15# a_97_79# Cout Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1029 a_97_15# A1 GND Gnd nfet w=4 l=2
++  ad=8p pd=8u as=20p ps=18u
+M1030 a_97_79# B1 a_97_15# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1031 Sum2 a_209_15# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1032 VDD B0 a_75_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1033 VDD a_33_15# a_251_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1034 Sum1 a_33_15# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1035 a_209_15# a_185_79# VDD VDD pfet w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+M1036 a_33_15# a_9_79# GND Gnd nfet w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+M1037 VDD B0 a_9_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1038 VDD a_33_15# a_185_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1039 a_185_79# a_33_15# a_185_15# Gnd nfet w=4 l=2
++  ad=20p pd=18u as=8p ps=8u
+M1040 VDD a_143_12# a_139_79# VDD pfet w=8 l=2
++  ad=40p pd=26u as=16p ps=12u
+M1041 VDD a_185_79# Cout VDD pfet w=8 l=2
++  ad=40p pd=26u as=24p ps=14u
+M1042 a_231_12# a_129_37# GND Gnd nfet w=4 l=2
++  ad=12p pd=10u as=20p ps=18u
+M1043 a_75_79# A0 a_55_12# VDD pfet w=8 l=2
++  ad=16p pd=12u as=40p ps=26u
+M1044 GND a_55_12# Sum1 Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+M1045 GND a_231_12# Sum2 Gnd nfet w=4 l=2
++  ad=20p pd=18u as=12p ps=10u
+C0 Cout GND 0.077011f
+C1 A1 GND 0.12545f
+C2 A1 B1 0.677375f
+C3 Sum2 GND 0.13863f
+C4 a_9_79# GND 0.077656f
+C5 a_33_15# A1 0.003824f
+C6 a_33_15# Sum2 0.017935f
+C7 B0 a_55_12# 0.021989f
+C8 VDD B1 0.145474f
+C9 a_9_79# a_33_15# 0.270725f
+C10 a_231_12# GND 0.139275f
+C11 a_97_79# a_209_15# 0.016067f
+C12 A0 a_9_79# 0.030629f
+C13 VDD a_33_15# 0.342847f
+C14 a_129_37# GND 0.264247f
+C15 a_185_79# Cout 0.095474f
+C16 a_33_15# a_231_12# 0.022255f
+C17 B1 a_129_37# 0.0203f
+C18 VDD A0 0.083025f
+C19 a_97_79# a_121_15# 0.136785f
+C20 A1 a_143_12# 0.169369f
+C21 a_185_79# Sum2 0.015554f
+C22 a_33_15# a_129_37# 0.689323f
+C23 VDD Sum1 0.064113f
+C24 VDD a_185_79# 0.334466f
+C25 VDD a_143_12# 0.166884f
+C26 a_185_79# a_231_12# 0.016569f
+C27 a_129_37# a_185_79# 0.095441f
+C28 a_143_12# a_129_37# 0.087759f
+C29 a_97_79# GND 0.07809f
+C30 B1 a_97_79# 0.095087f
+C31 a_55_12# GND 0.139275f
+C32 a_33_15# a_97_79# 1.19231f
+C33 B0 GND 0.001079f
+C34 a_33_15# a_55_12# 0.359972f
+C35 VDD Cout 0.248945f
+C36 B0 a_33_15# 0.564591f
+C37 A0 a_55_12# 0.169173f
+C38 VDD A1 0.083025f
+C39 a_231_12# Cout 0.032981f
+C40 a_209_15# GND 0.139221f
+C41 VDD Sum2 0.064113f
+C42 a_55_12# Sum1 0.0644f
+C43 a_97_79# a_185_79# 1.29997f
+C44 A0 B0 0.664658f
+C45 VDD a_9_79# 0.292269f
+C46 a_97_79# a_143_12# 0.016623f
+C47 a_231_12# Sum2 0.063936f
+C48 B0 Sum1 0.017735f
+C49 A1 a_129_37# 0.021345f
+C50 a_33_15# a_209_15# 0.020318f
+C51 a_121_15# GND 0.139221f
+C52 B1 a_121_15# 0.020108f
+C53 a_129_37# Sum2 0.018047f
+C54 VDD a_231_12# 0.166884f
+C55 a_33_15# a_121_15# 0.015987f
+C56 VDD a_129_37# 0.147139f
+C57 a_129_37# a_231_12# 0.169201f
+C58 a_185_79# a_209_15# 0.136799f
+C59 a_121_15# a_143_12# 0.349635f
+C60 B1 GND 0.001079f
+C61 a_97_79# Cout 0.089048f
+C62 A1 a_97_79# 0.095209f
+C63 a_97_79# Sum2 0.01893f
+C64 a_33_15# GND 0.1403f
+C65 a_33_15# B1 0.706959f
+C66 A0 GND 0.12545f
+C67 VDD a_97_79# 0.334466f
+C68 Sum1 GND 0.13863f
+C69 a_97_79# a_231_12# 0.02116f
+C70 A0 a_33_15# 0.023368f
+C71 B0 a_9_79# 0.092942f
+C72 VDD a_55_12# 0.166884f
+C73 a_185_79# GND 0.078301f
+C74 a_33_15# Sum1 0.515329f
+C75 a_97_79# a_129_37# 0.022742f
+C76 VDD B0 0.145474f
+C77 a_143_12# GND 0.139275f
+C78 B1 a_143_12# 0.022115f
+C79 a_209_15# Sum2 0.639218f
+C80 a_33_15# a_185_79# 0.110088f
+C81 A0 Sum1 0.018047f
+C82 A1 a_121_15# 0.021461f
+C83 a_33_15# a_143_12# 0.016145f
+C84 VDD a_209_15# 0.197373f
+C85 a_209_15# a_231_12# 0.351754f
+C86 VDD a_121_15# 0.197373f
+C87 a_129_37# a_209_15# 0.021461f
+C88 a_121_15# a_129_37# 0.639748f
+
