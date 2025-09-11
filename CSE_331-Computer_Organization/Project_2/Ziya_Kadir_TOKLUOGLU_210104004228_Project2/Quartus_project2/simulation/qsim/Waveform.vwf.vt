@@ -1,0 +1,136 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/05/2023 23:40:21"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          mux_8x1_1bit
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module mux_8x1_1bit_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg in_0;
+reg in_1;
+reg in_2;
+reg in_3;
+reg in_4;
+reg in_5;
+reg in_6;
+reg in_7;
+reg sel_0;
+reg sel_1;
+reg sel_2;
+// wires                                               
+wire out;
+
+// assign statements (if any)                          
+mux_8x1_1bit i1 (
+// port map - connection between master ports and signals/registers   
+	.in_0(in_0),
+	.in_1(in_1),
+	.in_2(in_2),
+	.in_3(in_3),
+	.in_4(in_4),
+	.in_5(in_5),
+	.in_6(in_6),
+	.in_7(in_7),
+	.out(out),
+	.sel_0(sel_0),
+	.sel_1(sel_1),
+	.sel_2(sel_2)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// in_0
+initial
+begin
+	in_0 = 1'b1;
+	in_0 = #240000 1'b0;
+end 
+
+// in_1
+initial
+begin
+	in_1 = 1'b0;
+end 
+
+// in_2
+initial
+begin
+	in_2 = 1'b0;
+end 
+
+// in_3
+initial
+begin
+	in_3 = 1'b0;
+end 
+
+// in_4
+initial
+begin
+	in_4 = 1'b0;
+end 
+
+// in_5
+initial
+begin
+	in_5 = 1'b0;
+end 
+
+// in_6
+initial
+begin
+	in_6 = 1'b0;
+end 
+
+// in_7
+initial
+begin
+	in_7 = 1'b0;
+end 
+
+// sel_0
+initial
+begin
+	sel_0 = 1'b1;
+	sel_0 = #180000 1'b0;
+end 
+
+// sel_1
+initial
+begin
+	sel_1 = 1'b0;
+end 
+
+// sel_2
+initial
+begin
+	sel_2 = 1'b0;
+end 
+endmodule
+

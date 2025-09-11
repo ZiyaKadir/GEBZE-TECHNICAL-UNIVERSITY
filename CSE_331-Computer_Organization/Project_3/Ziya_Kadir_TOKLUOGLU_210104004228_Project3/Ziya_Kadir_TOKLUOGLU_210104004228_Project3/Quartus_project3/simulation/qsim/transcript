@@ -1,0 +1,25 @@
+# do ALU.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:40:22 on Dec 05,2023
+# vlog -work work ALU.vo 
+# -- Compiling module mux_8x1_1bit
+# 
+# Top level modules:
+# 	mux_8x1_1bit
+# End time: 23:40:23 on Dec 05,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:40:23 on Dec 05,2023
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module mux_8x1_1bit_vlg_vec_tst
+# 
+# Top level modules:
+# 	mux_8x1_1bit_vlg_vec_tst
+# End time: 23:40:23 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.mux_8x1_1bit_vlg_vec_tst 
+# Start time: 23:40:23 on Dec 05,2023
+# ** Error (suppressible): (vsim-12110) The -novopt option has no effect on this product. -novopt option is now deprecated and will be removed in future releases.
+# Error loading design
+# End time: 23:40:23 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

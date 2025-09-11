@@ -1,0 +1,1384 @@
+# Reading pref.tcl
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/and_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:29 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/and_gate_32.v 
+# -- Compiling module and_gate_32
+# 
+# Top level modules:
+# 	and_gate_32
+# End time: 10:52:29 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/or_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:29 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/or_gate_32.v 
+# -- Compiling module or_gate_32
+# 
+# Top level modules:
+# 	or_gate_32
+# End time: 10:52:29 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/xor_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:29 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/xor_gate_32.v 
+# -- Compiling module xor_gate_32
+# 
+# Top level modules:
+# 	xor_gate_32
+# End time: 10:52:29 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/nor_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:29 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/nor_gate_32.v 
+# -- Compiling module nor_gate_32
+# 
+# Top level modules:
+# 	nor_gate_32
+# End time: 10:52:29 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:29 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_1bit.v 
+# -- Compiling module mux_2x1_1bit
+# 
+# Top level modules:
+# 	mux_2x1_1bit
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_4x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_4x1_1bit.v 
+# -- Compiling module mux_4x1_1bit
+# 
+# Top level modules:
+# 	mux_4x1_1bit
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_1bit.v 
+# -- Compiling module mux_8x1_1bit
+# 
+# Top level modules:
+# 	mux_8x1_1bit
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_32bit.v 
+# -- Compiling module mux_8x1_32bit
+# 
+# Top level modules:
+# 	mux_8x1_32bit
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_4bit.v 
+# -- Compiling module CLA_4bit
+# 
+# Top level modules:
+# 	CLA_4bit
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sum_out.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sum_out.v 
+# -- Compiling module sum_out
+# 
+# Top level modules:
+# 	sum_out
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/carry_out_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/carry_out_generator.v 
+# -- Compiling module carry_out_generator
+# 
+# Top level modules:
+# 	carry_out_generator
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_16bit_2level.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_16bit_2level.v 
+# -- Compiling module CLA_16bit_2level
+# 
+# Top level modules:
+# 	CLA_16bit_2level
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/generator_and_propagate_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/generator_and_propagate_4bit.v 
+# -- Compiling module generator_and_propagate_4bit
+# 
+# Top level modules:
+# 	generator_and_propagate_4bit
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_over_flow.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_over_flow.v 
+# -- Compiling module control_over_flow
+# 
+# Top level modules:
+# 	control_over_flow
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_32bit.v 
+# -- Compiling module mux_2x1_32bit
+# 
+# Top level modules:
+# 	mux_2x1_32bit
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/not_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/not_gate_32.v 
+# -- Compiling module not_gate_32
+# 
+# Top level modules:
+# 	not_gate_32
+# End time: 10:52:30 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sett_less_than.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:30 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sett_less_than.v 
+# -- Compiling module sett_less_than
+# 
+# Top level modules:
+# 	sett_less_than
+# End time: 10:52:31 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/Basic_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:31 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/Basic_controller.v 
+# -- Compiling module Basic_controller
+# 
+# Top level modules:
+# 	Basic_controller
+# End time: 10:52:31 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:31 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 10:52:31 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:31 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 10:52:31 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:31 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 10:52:31 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:31 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu_control.v 
+# -- Compiling module alu_control
+# 
+# Top level modules:
+# 	alu_control
+# End time: 10:52:31 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sign_extend.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:31 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sign_extend.v 
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	sign_extend
+# End time: 10:52:32 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/shift_left_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:32 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/shift_left_2.v 
+# -- Compiling module shift_left_2
+# 
+# Top level modules:
+# 	shift_left_2
+# End time: 10:52:32 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mips.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:32 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mips.v 
+# -- Compiling module mips
+# 
+# Top level modules:
+# 	mips
+# End time: 10:52:32 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/register_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:32 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/register_block.v 
+# -- Compiling module register_block
+# 
+# Top level modules:
+# 	register_block
+# End time: 10:52:32 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/instruction_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:32 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/instruction_block.v 
+# -- Compiling module instruction_block
+# 
+# Top level modules:
+# 	instruction_block
+# End time: 10:52:32 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/memory_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:32 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/memory_block.v 
+# -- Compiling module memory_block
+# 
+# Top level modules:
+# 	memory_block
+# End time: 10:52:32 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/my_testbench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:52:33 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/my_testbench.v 
+# -- Compiling module my_testbench
+# 
+# Top level modules:
+# 	my_testbench
+# End time: 10:52:33 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  my_testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" my_testbench 
+# Start time: 10:52:33 on Jan 19,2024
+# Loading work.my_testbench
+# Loading work.mips
+# Loading work.instruction_block
+# Loading work.register_block
+# Loading work.alu
+# Loading work.not_gate_32
+# Loading work.Basic_controller
+# Loading work.and_gate_32
+# Loading work.or_gate_32
+# Loading work.xor_gate_32
+# Loading work.nor_gate_32
+# Loading work.mux_2x1_32bit
+# Loading work.mux_2x1_1bit
+# Loading work.adder
+# Loading work.CLA_16bit_2level
+# Loading work.generator_and_propagate_4bit
+# Loading work.carry_out_generator
+# Loading work.CLA_4bit
+# Loading work.sum_out
+# Loading work.control_over_flow
+# Loading work.sett_less_than
+# Loading work.mux_8x1_32bit
+# Loading work.mux_8x1_1bit
+# Loading work.mux_4x1_1bit
+# Loading work.memory_block
+# Loading work.control_unit
+# Loading work.sign_extend
+# Loading work.alu_control
+# Loading work.shift_left_2
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (9) for port 'address'. The port definition is at: C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/memory_block.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /my_testbench/mips_test/M_block File: C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mips.v Line: 79
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#          1 instruction number
+# read_reg1= 00000 
+# read_reg2= 01000 
+# write_reg= 01000 
+# pc =          0, Final_pc=          4, jumpaddress =         24
+# INSTRUCTION = 00001000000010000000000000000110
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000110
+# write_data = 00000000000000000000000000000110
+# write_real = 01000
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 101 ALUop= 101
+# output_ALU = 00000000000000000000000000000110
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 10000 
+# write_reg= 10000 
+#          2 instruction number
+# pc =          4, Final_pc=          8, jumpaddress = 4294967264
+# INSTRUCTION = 00001100000100001111111111111000
+# read_data1= 00000000000000000000000000000000
+# read_data2= 11111111111111111111111111111000
+# write_data = 11111111111111111111111111111000
+# write_real = 10000
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 110 ALUop= 110
+# output_ALU = 11111111111111111111111111111000
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 01110 
+# write_reg= 01110 
+#          3 instruction number
+# pc =          8, Final_pc=         12, jumpaddress =         24
+# INSTRUCTION = 10001000000011100000000000000110
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000000000
+# write_real = 01110
+# regWrite = 0
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000000
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 01000 
+# read_reg2= 00100 
+# write_reg= 00100 
+#          4 instruction number
+# pc =         12, Final_pc=         16, jumpaddress =          0
+# INSTRUCTION = 10000001000001000000000000000000
+# read_data1= 00000000000000000000000000000110
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000000110
+# write_real = 00100
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 01000
+# move = 1
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000001
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 00000 
+# write_reg= 11111 
+#          5 instruction number
+# pc =         16, Final_pc=         20, jumpaddress =         40
+# INSTRUCTION = 11100100000000000000000000001010
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000010000
+# write_real = 11111
+# regWrite = 1
+# jump = 1
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000000
+# ALUsrc = 0 , branch = 0, jump= 1
+# regDst = 0 , jump_jr = 0, jump_jal= 1
+# read_reg1= 00100 
+# read_reg2= 00010 
+# write_reg= 00010 
+#          6 instruction number
+# pc =         40, Final_pc=         44, jumpaddress =        124
+# INSTRUCTION = 00010100100000100000000000011111
+# read_data1= 00000000000000000000000000000110
+# read_data2= 00000000000000000000000000011111
+# write_data = 00000000000000000000000000011111
+# write_real = 00010
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00100
+# move = 0
+# ALU_control = 001 ALUop= 001
+# output_ALU = 00000000000000000000000000011111
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 11111 
+# read_reg2= 00000 
+# write_reg= 11111 
+do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/and_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/and_gate_32.v 
+# -- Compiling module and_gate_32
+# 
+# Top level modules:
+# 	and_gate_32
+# End time: 10:57:41 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/or_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/or_gate_32.v 
+# -- Compiling module or_gate_32
+# 
+# Top level modules:
+# 	or_gate_32
+# End time: 10:57:41 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/xor_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/xor_gate_32.v 
+# -- Compiling module xor_gate_32
+# 
+# Top level modules:
+# 	xor_gate_32
+# End time: 10:57:41 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/nor_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/nor_gate_32.v 
+# -- Compiling module nor_gate_32
+# 
+# Top level modules:
+# 	nor_gate_32
+# End time: 10:57:41 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_1bit.v 
+# -- Compiling module mux_2x1_1bit
+# 
+# Top level modules:
+# 	mux_2x1_1bit
+# End time: 10:57:41 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_4x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_4x1_1bit.v 
+# -- Compiling module mux_4x1_1bit
+# 
+# Top level modules:
+# 	mux_4x1_1bit
+# End time: 10:57:41 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_1bit.v 
+# -- Compiling module mux_8x1_1bit
+# 
+# Top level modules:
+# 	mux_8x1_1bit
+# End time: 10:57:41 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:41 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_32bit.v 
+# -- Compiling module mux_8x1_32bit
+# 
+# Top level modules:
+# 	mux_8x1_32bit
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_4bit.v 
+# -- Compiling module CLA_4bit
+# 
+# Top level modules:
+# 	CLA_4bit
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sum_out.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sum_out.v 
+# -- Compiling module sum_out
+# 
+# Top level modules:
+# 	sum_out
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/carry_out_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/carry_out_generator.v 
+# -- Compiling module carry_out_generator
+# 
+# Top level modules:
+# 	carry_out_generator
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_16bit_2level.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_16bit_2level.v 
+# -- Compiling module CLA_16bit_2level
+# 
+# Top level modules:
+# 	CLA_16bit_2level
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/generator_and_propagate_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/generator_and_propagate_4bit.v 
+# -- Compiling module generator_and_propagate_4bit
+# 
+# Top level modules:
+# 	generator_and_propagate_4bit
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_over_flow.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_over_flow.v 
+# -- Compiling module control_over_flow
+# 
+# Top level modules:
+# 	control_over_flow
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_32bit.v 
+# -- Compiling module mux_2x1_32bit
+# 
+# Top level modules:
+# 	mux_2x1_32bit
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/not_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/not_gate_32.v 
+# -- Compiling module not_gate_32
+# 
+# Top level modules:
+# 	not_gate_32
+# End time: 10:57:42 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sett_less_than.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:42 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sett_less_than.v 
+# -- Compiling module sett_less_than
+# 
+# Top level modules:
+# 	sett_less_than
+# End time: 10:57:43 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/Basic_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:43 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/Basic_controller.v 
+# -- Compiling module Basic_controller
+# 
+# Top level modules:
+# 	Basic_controller
+# End time: 10:57:43 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:43 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 10:57:43 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:43 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 10:57:43 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:43 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 10:57:43 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:43 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu_control.v 
+# -- Compiling module alu_control
+# 
+# Top level modules:
+# 	alu_control
+# End time: 10:57:43 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sign_extend.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:43 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sign_extend.v 
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	sign_extend
+# End time: 10:57:44 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/shift_left_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:44 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/shift_left_2.v 
+# -- Compiling module shift_left_2
+# 
+# Top level modules:
+# 	shift_left_2
+# End time: 10:57:44 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mips.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:44 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mips.v 
+# -- Compiling module mips
+# 
+# Top level modules:
+# 	mips
+# End time: 10:57:44 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/register_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:44 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/register_block.v 
+# -- Compiling module register_block
+# 
+# Top level modules:
+# 	register_block
+# End time: 10:57:44 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/instruction_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:44 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/instruction_block.v 
+# -- Compiling module instruction_block
+# 
+# Top level modules:
+# 	instruction_block
+# End time: 10:57:44 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/memory_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:44 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/memory_block.v 
+# -- Compiling module memory_block
+# 
+# Top level modules:
+# 	memory_block
+# End time: 10:57:44 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/my_testbench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:44 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/my_testbench.v 
+# -- Compiling module my_testbench
+# 
+# Top level modules:
+# 	my_testbench
+# End time: 10:57:44 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  my_testbench
+# End time: 10:57:46 on Jan 19,2024, Elapsed time: 0:05:13
+# Errors: 0, Warnings: 1
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" my_testbench 
+# Start time: 10:57:46 on Jan 19,2024
+# Loading work.my_testbench
+# Loading work.mips
+# Loading work.instruction_block
+# Loading work.register_block
+# Loading work.alu
+# Loading work.not_gate_32
+# Loading work.Basic_controller
+# Loading work.and_gate_32
+# Loading work.or_gate_32
+# Loading work.xor_gate_32
+# Loading work.nor_gate_32
+# Loading work.mux_2x1_32bit
+# Loading work.mux_2x1_1bit
+# Loading work.adder
+# Loading work.CLA_16bit_2level
+# Loading work.generator_and_propagate_4bit
+# Loading work.carry_out_generator
+# Loading work.CLA_4bit
+# Loading work.sum_out
+# Loading work.control_over_flow
+# Loading work.sett_less_than
+# Loading work.mux_8x1_32bit
+# Loading work.mux_8x1_1bit
+# Loading work.mux_4x1_1bit
+# Loading work.memory_block
+# Loading work.control_unit
+# Loading work.sign_extend
+# Loading work.alu_control
+# Loading work.shift_left_2
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#          1 instruction number
+# read_reg1= 00000 
+# read_reg2= 01000 
+# write_reg= 01000 
+# pc =          0, Final_pc=          4, jumpaddress =         24
+# INSTRUCTION = 00001000000010000000000000000110
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000110
+# write_data = 00000000000000000000000000000110
+# write_real = 01000
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 101 ALUop= 101
+# output_ALU = 00000000000000000000000000000110
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 10000 
+# write_reg= 10000 
+#          2 instruction number
+# pc =          4, Final_pc=          8, jumpaddress = 4294967264
+# INSTRUCTION = 00001100000100001111111111111000
+# read_data1= 00000000000000000000000000000000
+# read_data2= 11111111111111111111111111111000
+# write_data = 11111111111111111111111111111000
+# write_real = 10000
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 110 ALUop= 110
+# output_ALU = 11111111111111111111111111111000
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 01110 
+# write_reg= 01110 
+#          3 instruction number
+# pc =          8, Final_pc=         12, jumpaddress =         24
+# INSTRUCTION = 10001000000011100000000000000110
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000000000
+# write_real = 01110
+# regWrite = 0
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000000
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 01000 
+# read_reg2= 00100 
+# write_reg= 00100 
+#          4 instruction number
+# pc =         12, Final_pc=         16, jumpaddress =          0
+# INSTRUCTION = 10000001000001000000000000000000
+# read_data1= 00000000000000000000000000000110
+# read_data2= 00000000000000000000000000000110
+# write_data = 00000000000000000000000000000110
+# write_real = 00100
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 01000
+# move = 1
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000001
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 00000 
+# write_reg= 11111 
+#          5 instruction number
+# pc =         16, Final_pc=         20, jumpaddress =         40
+# INSTRUCTION = 11100100000000000000000000001010
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000010000
+# write_real = 11111
+# regWrite = 1
+# jump = 1
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000000
+# ALUsrc = 0 , branch = 0, jump= 1
+# regDst = 0 , jump_jr = 0, jump_jal= 1
+# read_reg1= 00100 
+# read_reg2= 00010 
+# write_reg= 00010 
+#          6 instruction number
+# pc =         40, Final_pc=         44, jumpaddress =        124
+# INSTRUCTION = 00010100100000100000000000011111
+# read_data1= 00000000000000000000000000000110
+# read_data2= 00000000000000000000000000011111
+# write_data = 00000000000000000000000000011111
+# write_real = 00010
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00100
+# move = 0
+# ALU_control = 001 ALUop= 001
+# output_ALU = 00000000000000000000000000011111
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 11111 
+# read_reg2= 00000 
+# write_reg= 11111 
+do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/and_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:12 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/and_gate_32.v 
+# -- Compiling module and_gate_32
+# 
+# Top level modules:
+# 	and_gate_32
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/or_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/or_gate_32.v 
+# -- Compiling module or_gate_32
+# 
+# Top level modules:
+# 	or_gate_32
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/xor_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/xor_gate_32.v 
+# -- Compiling module xor_gate_32
+# 
+# Top level modules:
+# 	xor_gate_32
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/nor_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/nor_gate_32.v 
+# -- Compiling module nor_gate_32
+# 
+# Top level modules:
+# 	nor_gate_32
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_1bit.v 
+# -- Compiling module mux_2x1_1bit
+# 
+# Top level modules:
+# 	mux_2x1_1bit
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_4x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_4x1_1bit.v 
+# -- Compiling module mux_4x1_1bit
+# 
+# Top level modules:
+# 	mux_4x1_1bit
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_1bit.v 
+# -- Compiling module mux_8x1_1bit
+# 
+# Top level modules:
+# 	mux_8x1_1bit
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_8x1_32bit.v 
+# -- Compiling module mux_8x1_32bit
+# 
+# Top level modules:
+# 	mux_8x1_32bit
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_4bit.v 
+# -- Compiling module CLA_4bit
+# 
+# Top level modules:
+# 	CLA_4bit
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sum_out.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sum_out.v 
+# -- Compiling module sum_out
+# 
+# Top level modules:
+# 	sum_out
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/carry_out_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/carry_out_generator.v 
+# -- Compiling module carry_out_generator
+# 
+# Top level modules:
+# 	carry_out_generator
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_16bit_2level.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:13 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/CLA_16bit_2level.v 
+# -- Compiling module CLA_16bit_2level
+# 
+# Top level modules:
+# 	CLA_16bit_2level
+# End time: 14:05:13 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/generator_and_propagate_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/generator_and_propagate_4bit.v 
+# -- Compiling module generator_and_propagate_4bit
+# 
+# Top level modules:
+# 	generator_and_propagate_4bit
+# End time: 14:05:14 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_over_flow.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_over_flow.v 
+# -- Compiling module control_over_flow
+# 
+# Top level modules:
+# 	control_over_flow
+# End time: 14:05:14 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mux_2x1_32bit.v 
+# -- Compiling module mux_2x1_32bit
+# 
+# Top level modules:
+# 	mux_2x1_32bit
+# End time: 14:05:14 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/not_gate_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/not_gate_32.v 
+# -- Compiling module not_gate_32
+# 
+# Top level modules:
+# 	not_gate_32
+# End time: 14:05:14 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sett_less_than.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sett_less_than.v 
+# -- Compiling module sett_less_than
+# 
+# Top level modules:
+# 	sett_less_than
+# End time: 14:05:14 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/Basic_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/Basic_controller.v 
+# -- Compiling module Basic_controller
+# 
+# Top level modules:
+# 	Basic_controller
+# End time: 14:05:14 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 14:05:14 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:14 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 14:05:15 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 14:05:15 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/alu_control.v 
+# -- Compiling module alu_control
+# 
+# Top level modules:
+# 	alu_control
+# End time: 14:05:15 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sign_extend.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/sign_extend.v 
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	sign_extend
+# End time: 14:05:15 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/shift_left_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/shift_left_2.v 
+# -- Compiling module shift_left_2
+# 
+# Top level modules:
+# 	shift_left_2
+# End time: 14:05:15 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mips.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/mips.v 
+# -- Compiling module mips
+# 
+# Top level modules:
+# 	mips
+# End time: 14:05:15 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/register_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/register_block.v 
+# -- Compiling module register_block
+# 
+# Top level modules:
+# 	register_block
+# End time: 14:05:16 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/instruction_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:16 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/instruction_block.v 
+# -- Compiling module instruction_block
+# 
+# Top level modules:
+# 	instruction_block
+# End time: 14:05:16 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/memory_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:16 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/memory_block.v 
+# -- Compiling module memory_block
+# 
+# Top level modules:
+# 	memory_block
+# End time: 14:05:16 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zktok/Desktop/CSE\ 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3 {C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/my_testbench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:16 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3" C:/Users/zktok/Desktop/CSE 331/Ziya_Kadir_TOKLUOGLU_210104004228_Project3/Quartus_project3/my_testbench.v 
+# -- Compiling module my_testbench
+# 
+# Top level modules:
+# 	my_testbench
+# End time: 14:05:16 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  my_testbench
+# End time: 14:05:17 on Jan 19,2024, Elapsed time: 3:07:31
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" my_testbench 
+# Start time: 14:05:17 on Jan 19,2024
+# Loading work.my_testbench
+# Loading work.mips
+# Loading work.instruction_block
+# Loading work.register_block
+# Loading work.alu
+# Loading work.not_gate_32
+# Loading work.Basic_controller
+# Loading work.and_gate_32
+# Loading work.or_gate_32
+# Loading work.xor_gate_32
+# Loading work.nor_gate_32
+# Loading work.mux_2x1_32bit
+# Loading work.mux_2x1_1bit
+# Loading work.adder
+# Loading work.CLA_16bit_2level
+# Loading work.generator_and_propagate_4bit
+# Loading work.carry_out_generator
+# Loading work.CLA_4bit
+# Loading work.sum_out
+# Loading work.control_over_flow
+# Loading work.sett_less_than
+# Loading work.mux_8x1_32bit
+# Loading work.mux_8x1_1bit
+# Loading work.mux_4x1_1bit
+# Loading work.memory_block
+# Loading work.control_unit
+# Loading work.sign_extend
+# Loading work.alu_control
+# Loading work.shift_left_2
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#          1 instruction number
+# read_reg1= 00000 
+# read_reg2= 01000 
+# write_reg= 01000 
+# pc =          0, Final_pc=          4, jumpaddress =         24
+# INSTRUCTION = 00001000000010000000000000000110
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000000110
+# write_real = 01000
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 101 ALUop= 101
+# output_ALU = 00000000000000000000000000000110
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 10000 
+# write_reg= 10000 
+#          2 instruction number
+# pc =          4, Final_pc=          8, jumpaddress = 4294967264
+# INSTRUCTION = 00001100000100001111111111111000
+# read_data1= 00000000000000000000000000000000
+# read_data2= 11111111111111111111111111111000
+# write_data = 11111111111111111111111111111000
+# write_real = 10000
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 110 ALUop= 110
+# output_ALU = 11111111111111111111111111111000
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 01110 
+# write_reg= 01110 
+#          3 instruction number
+# pc =          8, Final_pc=         12, jumpaddress =         24
+# INSTRUCTION = 10001000000011100000000000000110
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000000000
+# write_real = 01110
+# regWrite = 0
+# jump = 0
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000000
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 01000 
+# read_reg2= 00100 
+# write_reg= 00100 
+#          4 instruction number
+# pc =         12, Final_pc=         16, jumpaddress =          0
+# INSTRUCTION = 10000001000001000000000000000000
+# read_data1= 00000000000000000000000000000110
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000000110
+# write_real = 00100
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 01000
+# move = 1
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000001
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 00000 
+# read_reg2= 00000 
+# write_reg= 11111 
+#          5 instruction number
+# pc =         16, Final_pc=         20, jumpaddress =         40
+# INSTRUCTION = 11100100000000000000000000001010
+# read_data1= 00000000000000000000000000000000
+# read_data2= 00000000000000000000000000000000
+# write_data = 00000000000000000000000000010000
+# write_real = 11111
+# regWrite = 1
+# jump = 1
+# zero_bit= 0
+# read1 = 00000
+# move = 0
+# ALU_control = 100 ALUop= 100
+# output_ALU = 00000000000000000000000000000000
+# ALUsrc = 0 , branch = 0, jump= 1
+# regDst = 0 , jump_jr = 0, jump_jal= 1
+# read_reg1= 00100 
+# read_reg2= 00010 
+# write_reg= 00010 
+#          6 instruction number
+# pc =         40, Final_pc=         44, jumpaddress =        124
+# INSTRUCTION = 00010100100000100000000000011111
+# read_data1= 00000000000000000000000000000110
+# read_data2= 00000000000000000000000000011111
+# write_data = 00000000000000000000000000011111
+# write_real = 00010
+# regWrite = 1
+# jump = 0
+# zero_bit= 0
+# read1 = 00100
+# move = 0
+# ALU_control = 001 ALUop= 001
+# output_ALU = 00000000000000000000000000011111
+# ALUsrc = 0 , branch = 0, jump= 0
+# regDst = 0 , jump_jr = 0, jump_jal= 0
+# read_reg1= 11111 
+# read_reg2= 00000 
+# write_reg= 11111 
+# End time: 14:05:24 on Jan 19,2024, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0

@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : -9.625
+TNS   : -303.424
+
+Type  : Slow 1100mV 85C Model Setup 'CLK'
+Slack : -5.153
+TNS   : -142.410
+
+Type  : Slow 1100mV 85C Model Hold 'CLK'
+Slack : 0.569
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 3.049
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -0.724
+TNS   : -45.126
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : -9.721
+TNS   : -307.258
+
+Type  : Slow 1100mV 0C Model Setup 'CLK'
+Slack : -4.985
+TNS   : -137.248
+
+Type  : Slow 1100mV 0C Model Hold 'CLK'
+Slack : 0.543
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 3.137
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -0.724
+TNS   : -45.975
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : -3.938
+TNS   : -112.498
+
+Type  : Fast 1100mV 85C Model Setup 'CLK'
+Slack : -1.631
+TNS   : -42.817
+
+Type  : Fast 1100mV 85C Model Hold 'CLK'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 1.447
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -0.088
+TNS   : -2.115
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : -3.695
+TNS   : -105.073
+
+Type  : Fast 1100mV 0C Model Setup 'CLK'
+Slack : -1.375
+TNS   : -33.992
+
+Type  : Fast 1100mV 0C Model Hold 'CLK'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 1.411
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -0.088
+TNS   : -2.553
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mod:mod_op|mod_cu:control|curr_state.Result'
+Slack : 0.325
+TNS   : 0.000
+
+------------------------------------------------------------

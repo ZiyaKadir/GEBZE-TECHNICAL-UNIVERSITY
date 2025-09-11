@@ -1,0 +1,840 @@
+Analysis & Synthesis report for ALU
+Sun Dec 10 19:27:27 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |alu|mod:mod_op|mod_cu:control|curr_state
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "mod:mod_op|mod_dp:datapath|adder:add"
+ 12. Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3"
+ 13. Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2"
+ 14. Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1"
+ 15. Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0"
+ 16. Port Connectivity Checks: "adder:adder_32"
+ 17. Port Connectivity Checks: "mux_2x1_32bit:mux_2"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Dec 10 19:27:27 2023       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; ALU                                         ;
+; Top-level Entity Name           ; alu                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 35                                          ;
+; Total pins                      ; 101                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; alu                ; ALU                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 14          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-14        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; and_gate_32.v                    ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/and_gate_32.v                  ;         ;
+; or_gate_32.v                     ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/or_gate_32.v                   ;         ;
+; xor_gate_32.v                    ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/xor_gate_32.v                  ;         ;
+; nor_gate_32.v                    ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/nor_gate_32.v                  ;         ;
+; mux_2x1_1bit.v                   ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_2x1_1bit.v                 ;         ;
+; mux_4x1_1bit.v                   ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_4x1_1bit.v                 ;         ;
+; mux_8x1_1bit.v                   ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_8x1_1bit.v                 ;         ;
+; mux_8x1_32bit.v                  ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_8x1_32bit.v                ;         ;
+; CLA_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_4bit.v                     ;         ;
+; sum_out.v                        ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sum_out.v                      ;         ;
+; carry_out_generator.v            ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/carry_out_generator.v          ;         ;
+; CLA_16bit_2level.v               ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_16bit_2level.v             ;         ;
+; generator_and_propagate_4bit.v   ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/generator_and_propagate_4bit.v ;         ;
+; control_over_flow.v              ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/control_over_flow.v            ;         ;
+; mux_2x1_32bit.v                  ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_2x1_32bit.v                ;         ;
+; not_gate_32.v                    ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/not_gate_32.v                  ;         ;
+; sett_less_than.v                 ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v               ;         ;
+; Basic_controller.v               ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/Basic_controller.v             ;         ;
+; mod.v                            ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod.v                          ;         ;
+; mod_cu.v                         ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v                       ;         ;
+; mod_dp.v                         ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_dp.v                       ;         ;
+; adder.v                          ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/adder.v                        ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v                          ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 285             ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 406             ;
+;     -- 7 input functions                    ; 31              ;
+;     -- 6 input functions                    ; 101             ;
+;     -- 5 input functions                    ; 103             ;
+;     -- 4 input functions                    ; 74              ;
+;     -- <=3 input functions                  ; 97              ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 35              ;
+;                                             ;                 ;
+; I/O pins                                    ; 101             ;
+;                                             ;                 ;
+; Total DSP Blocks                            ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; ALU_op[0]~input ;
+; Maximum fan-out                             ; 112             ;
+; Total fan-out                               ; 2197            ;
+; Average fan-out                             ; 3.42            ;
++---------------------------------------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Entity Name                  ; Library Name ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; |alu                                                    ; 406 (0)             ; 35 (0)                    ; 0                 ; 0          ; 101  ; 0            ; |alu                                                                                                           ; alu                          ; work         ;
+;    |Basic_controller:cont|                              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|Basic_controller:cont                                                                                     ; Basic_controller             ; work         ;
+;    |adder:adder_32|                                     ; 159 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32                                                                                            ; adder                        ; work         ;
+;       |CLA_16bit_2level:add_1|                          ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1                                                                     ; CLA_16bit_2level             ; work         ;
+;          |CLA_4bit:layer0|                              ; 10 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |CLA_4bit:layer1|                              ; 12 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |CLA_4bit:layer2|                              ; 11 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |CLA_4bit:layer3|                              ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |carry_out_generator:generator|                ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|carry_out_generator:generator                                       ; carry_out_generator          ; work         ;
+;          |generator_and_propagate_4bit:p_and_g_0|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_0                              ; generator_and_propagate_4bit ; work         ;
+;          |generator_and_propagate_4bit:p_and_g_1|       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_1                              ; generator_and_propagate_4bit ; work         ;
+;          |generator_and_propagate_4bit:p_and_g_2|       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_2                              ; generator_and_propagate_4bit ; work         ;
+;          |generator_and_propagate_4bit:p_and_g_3|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_3                              ; generator_and_propagate_4bit ; work         ;
+;       |CLA_16bit_2level:add_2|                          ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2                                                                     ; CLA_16bit_2level             ; work         ;
+;          |CLA_4bit:layer0|                              ; 13 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer0                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer0|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |CLA_4bit:layer1|                              ; 13 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer1                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer1|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |CLA_4bit:layer2|                              ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer2                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer2|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |CLA_4bit:layer3|                              ; 13 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer3                                                     ; CLA_4bit                     ; work         ;
+;             |carry_out_generator:generator|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer3|carry_out_generator:generator                       ; carry_out_generator          ; work         ;
+;             |sum_out:sum_0|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_0                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_1|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_1                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_2|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_2                                       ; sum_out                      ; work         ;
+;             |sum_out:sum_3|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_3                                       ; sum_out                      ; work         ;
+;          |carry_out_generator:generator|                ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|carry_out_generator:generator                                       ; carry_out_generator          ; work         ;
+;          |generator_and_propagate_4bit:p_and_g_0|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|generator_and_propagate_4bit:p_and_g_0                              ; generator_and_propagate_4bit ; work         ;
+;          |generator_and_propagate_4bit:p_and_g_1|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|generator_and_propagate_4bit:p_and_g_1                              ; generator_and_propagate_4bit ; work         ;
+;          |generator_and_propagate_4bit:p_and_g_2|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|adder:adder_32|CLA_16bit_2level:add_2|generator_and_propagate_4bit:p_and_g_2                              ; generator_and_propagate_4bit ; work         ;
+;    |mod:mod_op|                                         ; 173 (0)             ; 35 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op                                                                                                ; mod                          ; work         ;
+;       |mod_cu:control|                                  ; 38 (38)             ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_cu:control                                                                                 ; mod_cu                       ; work         ;
+;       |mod_dp:datapath|                                 ; 135 (0)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath                                                                                ; mod_dp                       ; work         ;
+;          |adder:add|                                    ; 103 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add                                                                      ; adder                        ; work         ;
+;             |CLA_16bit_2level:add_1|                    ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1                                               ; CLA_16bit_2level             ; work         ;
+;                |CLA_4bit:layer0|                        ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer0                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer0|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |CLA_4bit:layer1|                        ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer1                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer1|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer1|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |CLA_4bit:layer2|                        ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer2                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer2|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer2|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |CLA_4bit:layer3|                        ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer3                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer3|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|CLA_4bit:layer3|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |carry_out_generator:generator|          ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|carry_out_generator:generator                 ; carry_out_generator          ; work         ;
+;                |generator_and_propagate_4bit:p_and_g_0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_0        ; generator_and_propagate_4bit ; work         ;
+;                |generator_and_propagate_4bit:p_and_g_1| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_1        ; generator_and_propagate_4bit ; work         ;
+;                |generator_and_propagate_4bit:p_and_g_2| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_2        ; generator_and_propagate_4bit ; work         ;
+;                |generator_and_propagate_4bit:p_and_g_3| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_3        ; generator_and_propagate_4bit ; work         ;
+;             |CLA_16bit_2level:add_2|                    ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2                                               ; CLA_16bit_2level             ; work         ;
+;                |CLA_4bit:layer0|                        ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer0                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer0|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer0|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |CLA_4bit:layer1|                        ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer1                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer1|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer1|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |CLA_4bit:layer2|                        ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer2                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer2|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer2|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |CLA_4bit:layer3|                        ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer3                               ; CLA_4bit                     ; work         ;
+;                   |carry_out_generator:generator|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer3|carry_out_generator:generator ; carry_out_generator          ; work         ;
+;                   |sum_out:sum_0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_0                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_1|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_1                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_2|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_2                 ; sum_out                      ; work         ;
+;                   |sum_out:sum_3|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|CLA_4bit:layer3|sum_out:sum_3                 ; sum_out                      ; work         ;
+;                |carry_out_generator:generator|          ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|carry_out_generator:generator                 ; carry_out_generator          ; work         ;
+;                |generator_and_propagate_4bit:p_and_g_0| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|generator_and_propagate_4bit:p_and_g_0        ; generator_and_propagate_4bit ; work         ;
+;                |generator_and_propagate_4bit:p_and_g_1| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|generator_and_propagate_4bit:p_and_g_1        ; generator_and_propagate_4bit ; work         ;
+;                |generator_and_propagate_4bit:p_and_g_2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|adder:add|CLA_16bit_2level:add_2|generator_and_propagate_4bit:p_and_g_2        ; generator_and_propagate_4bit ; work         ;
+;          |mux_2x1_32bit:mux_2|                          ; 32 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2                                                            ; mux_2x1_32bit                ; work         ;
+;             |mux_2x1_1bit:mux_0|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_0                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_10|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_10                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_11|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_11                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_12|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_12                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_13|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_13                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_14|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_14                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_15|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_15                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_16|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_16                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_17|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_17                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_18|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_18                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_19|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_19                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_1|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_1                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_20|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_20                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_21|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_21                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_22|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_22                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_23|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_23                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_24|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_24                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_25|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_25                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_26|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_26                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_27|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_27                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_28|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_28                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_29|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_29                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_2|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_2                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_30|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_30                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_31|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_31                                        ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_3|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_3                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_4|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_4                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_5|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_5                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_6|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_6                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_7|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_7                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_8|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_8                                         ; mux_2x1_1bit                 ; work         ;
+;             |mux_2x1_1bit:mux_9|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mod:mod_op|mod_dp:datapath|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_9                                         ; mux_2x1_1bit                 ; work         ;
+;    |mux_2x1_32bit:mux_1|                                ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_1                                                                                       ; mux_2x1_32bit                ; work         ;
+;       |mux_2x1_1bit:mux_12|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_1|mux_2x1_1bit:mux_12                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_14|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_1|mux_2x1_1bit:mux_14                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_1|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_1|mux_2x1_1bit:mux_1                                                                    ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_24|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_1|mux_2x1_1bit:mux_24                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_29|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_1|mux_2x1_1bit:mux_29                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_8|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_1|mux_2x1_1bit:mux_8                                                                    ; mux_2x1_1bit                 ; work         ;
+;    |mux_2x1_32bit:mux_2|                                ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2                                                                                       ; mux_2x1_32bit                ; work         ;
+;       |mux_2x1_1bit:mux_12|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_12                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_14|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_14                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_17|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_17                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_18|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_18                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_19|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_19                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_1|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_1                                                                    ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_21|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_21                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_22|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_22                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_23|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_23                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_24|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_24                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_29|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_29                                                                   ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_5|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_5                                                                    ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_6|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_6                                                                    ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_8|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_8                                                                    ; mux_2x1_1bit                 ; work         ;
+;       |mux_2x1_1bit:mux_9|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_2x1_32bit:mux_2|mux_2x1_1bit:mux_9                                                                    ; mux_2x1_1bit                 ; work         ;
+;    |mux_8x1_32bit:mux|                                  ; 50 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux                                                                                         ; mux_8x1_32bit                ; work         ;
+;       |mux_8x1_1bit:mux_0|                              ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_0                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_0|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;          |mux_4x1_1bit:mux_4_1bit_1|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_0|mux_4x1_1bit:mux_4_1bit_1                                            ; mux_4x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_10|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_10                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_10|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_11|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_11                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_11|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_12|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_12                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_12|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_13|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_13                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_13|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_14|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_14                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_14|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_15|                             ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_15                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_15|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_16|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_16                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_16|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_17|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_17                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_17|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_18|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_18                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_18|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_19|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_19                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_19|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_1|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_1                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_1|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_20|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_20                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_20|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_21|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_21                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_21|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_22|                             ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_22                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_22|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_23|                             ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_23                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_23|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_24|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_24                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_24|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_25|                             ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_25                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_25|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_26|                             ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_26                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_26|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_27|                             ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_27                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_27|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_28|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_28                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_28|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_29|                             ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_29                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_29|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_2|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_2                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_2|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_30|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_30                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_30|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_31|                             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_31                                                                     ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_31|mux_2x1_1bit:mux_2_1bit                                             ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_3|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_3                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_3|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_4|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_4                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_4|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_5|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_5                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_5|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_6|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_6                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_6|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_7|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_7                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_7|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_8|                              ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_8                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_8|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
+;       |mux_8x1_1bit:mux_9|                              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_9                                                                      ; mux_8x1_1bit                 ; work         ;
+;          |mux_2x1_1bit:mux_2_1bit|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux_8x1_32bit:mux|mux_8x1_1bit:mux_9|mux_2x1_1bit:mux_2_1bit                                              ; mux_2x1_1bit                 ; work         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------+
+; State Machine - |alu|mod:mod_op|mod_cu:control|curr_state                             ;
++----------------------+---------------------+-------------------+----------------------+
+; Name                 ; curr_state.T_assign ; curr_state.Result ; curr_state.Substract ;
++----------------------+---------------------+-------------------+----------------------+
+; curr_state.T_assign  ; 0                   ; 0                 ; 0                    ;
+; curr_state.Substract ; 1                   ; 0                 ; 1                    ;
+; curr_state.Result    ; 1                   ; 1                 ; 0                    ;
++----------------------+---------------------+-------------------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                        ;
++-----------------------------------------------------+---------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                         ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------------------------+------------------------+
+; mod:mod_op|mod_cu:control|result[0]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[1]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[2]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[3]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[4]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[5]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[6]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[7]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[8]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[9]                 ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[10]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[11]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[12]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[13]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[14]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[15]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[16]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[17]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[18]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[19]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[20]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[21]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[22]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[23]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[24]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[25]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[26]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[27]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[28]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[29]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[30]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|result[31]                ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|next_state.Result_292     ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; mod:mod_op|mod_cu:control|next_state.Substract_300  ; mod:mod_op|mod_cu:control|curr_state.Result ; yes                    ;
+; Number of user-specified and inferred latches = 34  ;                                             ;                        ;
++-----------------------------------------------------+---------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 35    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mod:mod_op|mod_dp:datapath|adder:add"                                                                                                                                                      ;
++--------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; carry_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; carry_in     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; carry_in[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer3"                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer2"                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer1"                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0"                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:adder_32"                                                                          ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "mux_2x1_32bit:mux_2" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; in_1 ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 35                          ;
+;     ENA SLD           ; 32                          ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 406                         ;
+;     extend            ; 31                          ;
+;         7 data inputs ; 31                          ;
+;     normal            ; 375                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 71                          ;
+;         4 data inputs ; 74                          ;
+;         5 data inputs ; 103                         ;
+;         6 data inputs ; 101                         ;
+; boundary_port         ; 101                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 8.68                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Dec 10 19:27:20 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file and_gate_32.v
+    Info (12023): Found entity 1: and_gate_32 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/and_gate_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_gate_32.v
+    Info (12023): Found entity 1: or_gate_32 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/or_gate_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor_gate_32.v
+    Info (12023): Found entity 1: xor_gate_32 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/xor_gate_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nor_gate_32.v
+    Info (12023): Found entity 1: nor_gate_32 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/nor_gate_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_1bit.v
+    Info (12023): Found entity 1: mux_2x1_1bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_2x1_1bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file my_testbench.v
+    Info (12023): Found entity 1: my_testbench File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/my_testbench.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4x1_1bit.v
+    Info (12023): Found entity 1: mux_4x1_1bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_4x1_1bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_8x1_1bit.v
+    Info (12023): Found entity 1: mux_8x1_1bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_8x1_1bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_8x1_32bit.v
+    Info (12023): Found entity 1: mux_8x1_32bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_8x1_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla_4bit.v
+    Info (12023): Found entity 1: CLA_4bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sum_out.v
+    Info (12023): Found entity 1: sum_out File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sum_out.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file carry_out_generator.v
+    Info (12023): Found entity 1: carry_out_generator File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/carry_out_generator.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla_16bit_2level.v
+    Info (12023): Found entity 1: CLA_16bit_2level File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_16bit_2level.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file generator_and_propagate_4bit.v
+    Info (12023): Found entity 1: generator_and_propagate_4bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/generator_and_propagate_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder_32bit.v
+    Info (12023): Found entity 1: Adder_32bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/Adder_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control_over_flow.v
+    Info (12023): Found entity 1: control_over_flow File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/control_over_flow.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_32bit.v
+    Info (12023): Found entity 1: mux_2x1_32bit File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_2x1_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file not_gate_32.v
+    Info (12023): Found entity 1: not_gate_32 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/not_gate_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sett_less_than.v
+    Info (12023): Found entity 1: sett_less_than File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file basic_controller.v
+    Info (12023): Found entity 1: Basic_controller File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/Basic_controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod.v
+    Info (12023): Found entity 1: mod File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod_cu.v
+    Info (12023): Found entity 1: mod_cu File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mod_dp.v
+    Info (12023): Found entity 1: mod_dp File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_dp.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: adder File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/adder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 1
+Info (12127): Elaborating entity "alu" for the top level hierarchy
+Info (12128): Elaborating entity "not_gate_32" for hierarchy "not_gate_32:not_1" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 27
+Info (12128): Elaborating entity "Basic_controller" for hierarchy "Basic_controller:cont" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 36
+Info (12128): Elaborating entity "and_gate_32" for hierarchy "and_gate_32:and_1" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 39
+Info (12128): Elaborating entity "or_gate_32" for hierarchy "or_gate_32:or_1" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 40
+Info (12128): Elaborating entity "xor_gate_32" for hierarchy "xor_gate_32:xor_1" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 41
+Info (12128): Elaborating entity "nor_gate_32" for hierarchy "nor_gate_32:nor_1" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 42
+Info (12128): Elaborating entity "mux_2x1_32bit" for hierarchy "mux_2x1_32bit:mux_1" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 45
+Info (12128): Elaborating entity "mux_2x1_1bit" for hierarchy "mux_2x1_32bit:mux_1|mux_2x1_1bit:mux_0" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_2x1_32bit.v Line: 11
+Info (12128): Elaborating entity "adder" for hierarchy "adder:adder_32" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 49
+Info (12128): Elaborating entity "CLA_16bit_2level" for hierarchy "adder:adder_32|CLA_16bit_2level:add_1" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/adder.v Line: 13
+Warning (10739): Verilog HDL warning at CLA_16bit_2level.v(32): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_16bit_2level.v Line: 32
+Info (12128): Elaborating entity "generator_and_propagate_4bit" for hierarchy "adder:adder_32|CLA_16bit_2level:add_1|generator_and_propagate_4bit:p_and_g_0" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_16bit_2level.v Line: 17
+Info (12128): Elaborating entity "carry_out_generator" for hierarchy "adder:adder_32|CLA_16bit_2level:add_1|carry_out_generator:generator" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_16bit_2level.v Line: 23
+Info (12128): Elaborating entity "CLA_4bit" for hierarchy "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_16bit_2level.v Line: 26
+Warning (10739): Verilog HDL warning at CLA_4bit.v(41): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_4bit.v Line: 41
+Info (12128): Elaborating entity "sum_out" for hierarchy "adder:adder_32|CLA_16bit_2level:add_1|CLA_4bit:layer0|sum_out:sum_0" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/CLA_4bit.v Line: 36
+Info (12128): Elaborating entity "control_over_flow" for hierarchy "control_over_flow:control" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 53
+Info (12128): Elaborating entity "sett_less_than" for hierarchy "sett_less_than:stl" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 54
+Warning (10739): Verilog HDL warning at sett_less_than.v(8): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 8
+Warning (10739): Verilog HDL warning at sett_less_than.v(9): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 9
+Warning (10739): Verilog HDL warning at sett_less_than.v(10): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 10
+Warning (10739): Verilog HDL warning at sett_less_than.v(11): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 11
+Warning (10739): Verilog HDL warning at sett_less_than.v(12): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 12
+Warning (10739): Verilog HDL warning at sett_less_than.v(13): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 13
+Warning (10739): Verilog HDL warning at sett_less_than.v(14): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 14
+Warning (10739): Verilog HDL warning at sett_less_than.v(15): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 15
+Warning (10739): Verilog HDL warning at sett_less_than.v(16): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 16
+Warning (10739): Verilog HDL warning at sett_less_than.v(17): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 17
+Warning (10739): Verilog HDL warning at sett_less_than.v(18): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 18
+Warning (10739): Verilog HDL warning at sett_less_than.v(19): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 19
+Warning (10739): Verilog HDL warning at sett_less_than.v(20): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 20
+Warning (10739): Verilog HDL warning at sett_less_than.v(21): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 21
+Warning (10739): Verilog HDL warning at sett_less_than.v(22): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 22
+Warning (10739): Verilog HDL warning at sett_less_than.v(23): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 23
+Warning (10739): Verilog HDL warning at sett_less_than.v(24): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 24
+Warning (10739): Verilog HDL warning at sett_less_than.v(25): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 25
+Warning (10739): Verilog HDL warning at sett_less_than.v(26): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 26
+Warning (10739): Verilog HDL warning at sett_less_than.v(27): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 27
+Warning (10739): Verilog HDL warning at sett_less_than.v(28): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 28
+Warning (10739): Verilog HDL warning at sett_less_than.v(29): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 29
+Warning (10739): Verilog HDL warning at sett_less_than.v(30): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 30
+Warning (10739): Verilog HDL warning at sett_less_than.v(31): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 31
+Warning (10739): Verilog HDL warning at sett_less_than.v(32): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 32
+Warning (10739): Verilog HDL warning at sett_less_than.v(33): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 33
+Warning (10739): Verilog HDL warning at sett_less_than.v(34): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 34
+Warning (10739): Verilog HDL warning at sett_less_than.v(35): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 35
+Warning (10739): Verilog HDL warning at sett_less_than.v(36): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 36
+Warning (10739): Verilog HDL warning at sett_less_than.v(37): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 37
+Warning (10739): Verilog HDL warning at sett_less_than.v(38): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 38
+Warning (10739): Verilog HDL warning at sett_less_than.v(39): actual bit length 32 differs from formal bit length 1 File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/sett_less_than.v Line: 39
+Info (12128): Elaborating entity "mod" for hierarchy "mod:mod_op" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 64
+Info (12128): Elaborating entity "mod_cu" for hierarchy "mod:mod_op|mod_cu:control" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod.v Line: 21
+Warning (10240): Verilog HDL Always Construct warning at mod_cu.v(44): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at mod_cu.v(44): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[0]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[1]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[2]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[3]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[4]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[5]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[6]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[7]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[8]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[9]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[10]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[11]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[12]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[13]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[14]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[15]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[16]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[17]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[18]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[19]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[20]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[21]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[22]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[23]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[24]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[25]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[26]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[27]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[28]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[29]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[30]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "result[31]" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "next_state.Result" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (10041): Inferred latch for "next_state.Substract" at mod_cu.v(44) File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod_cu.v Line: 44
+Info (12128): Elaborating entity "mod_dp" for hierarchy "mod:mod_op|mod_dp:datapath" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mod.v Line: 31
+Info (12128): Elaborating entity "mux_8x1_32bit" for hierarchy "mux_8x1_32bit:mux" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/alu.v Line: 67
+Info (12128): Elaborating entity "mux_8x1_1bit" for hierarchy "mux_8x1_32bit:mux|mux_8x1_1bit:mux_0" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_8x1_32bit.v Line: 19
+Info (12128): Elaborating entity "mux_4x1_1bit" for hierarchy "mux_8x1_32bit:mux|mux_8x1_1bit:mux_0|mux_4x1_1bit:mux_4_1bit_0" File: C:/Users/zktok/Desktop/CSE 331/Quartus_project2/mux_8x1_1bit.v Line: 22
+Info (13014): Ignored 1 buffer(s)
+    Info (13019): Ignored 1 SOFT buffer(s)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/zktok/Desktop/CSE 331/Quartus_project2/output_files/ALU.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 539 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 69 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 438 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Sun Dec 10 19:27:27 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/zktok/Desktop/CSE 331/Quartus_project2/output_files/ALU.map.smsg.
+
+

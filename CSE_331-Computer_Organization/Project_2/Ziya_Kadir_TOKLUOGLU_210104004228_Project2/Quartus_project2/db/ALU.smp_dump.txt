@@ -1,0 +1,6 @@
+
+State Machine - |alu|mod:mod_op|mod_cu:control|curr_state
+Name curr_state.T_assign curr_state.Result curr_state.Substract 
+curr_state.T_assign 0 0 0 
+curr_state.Substract 1 0 1 
+curr_state.Result 1 1 0 
