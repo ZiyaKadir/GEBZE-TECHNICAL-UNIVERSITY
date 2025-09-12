@@ -1,0 +1,5 @@
+N deposit 300
+BankID_01 withdraw 150
+BankID_02a deposit 500  # Invalid - contains a letter
+BankID_ withdraw 200    # Invalid - no number after underscore
+none deposit 1000       # Invalid - doesn't match format
