@@ -1,0 +1,148 @@
+|_5_bit_substractor
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+B[0] => _.IN1
+B[1] => _.IN1
+B[2] => _.IN1
+B[3] => _.IN1
+B[4] => _.IN1
+Diff[0] <= _1_bit_FA:FA1.Sum
+Diff[1] <= _1_bit_FA:FA2.Sum
+Diff[2] <= _1_bit_FA:FA3.Sum
+Diff[3] <= _1_bit_FA:FA4.Sum
+Diff[4] <= _1_bit_FA:FA5.Sum
+
+
+|_5_bit_substractor|_1_bit_FA:FA1
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= _1_bit_HA:HA2.Sum
+Cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_5_bit_substractor|_1_bit_FA:FA1|_1_bit_HA:HA1
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA1|_1_bit_HA:HA2
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA2
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= _1_bit_HA:HA2.Sum
+Cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_5_bit_substractor|_1_bit_FA:FA2|_1_bit_HA:HA1
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA2|_1_bit_HA:HA2
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA3
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= _1_bit_HA:HA2.Sum
+Cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_5_bit_substractor|_1_bit_FA:FA3|_1_bit_HA:HA1
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA3|_1_bit_HA:HA2
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA4
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= _1_bit_HA:HA2.Sum
+Cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_5_bit_substractor|_1_bit_FA:FA4|_1_bit_HA:HA1
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA4|_1_bit_HA:HA2
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA5
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= _1_bit_HA:HA2.Sum
+Cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_5_bit_substractor|_1_bit_FA:FA5|_1_bit_HA:HA1
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+
+|_5_bit_substractor|_1_bit_FA:FA5|_1_bit_HA:HA2
+Sum <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Carry <= or2.DB_MAX_OUTPUT_PORT_TYPE
+A => or1.IN0
+A => or2.IN0
+B => or1.IN1
+B => or2.IN1
+
+

@@ -1,0 +1,32 @@
+|LAB3_210104004228
+in1 => in1.IN2
+in2 => in2.IN2
+in3 => in3.IN2
+in4 => in4.IN2
+select => select.IN1
+out << _2to1_mux:comb_5.out
+
+
+|LAB3_210104004228|_4nand:comb_3
+a => res_nand.IN0
+b => res_nand.IN1
+c => res_nand.IN2
+d => res_nand.IN3
+out <= res_nand.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB3_210104004228|_4or:comb_4
+a => res_or.IN0
+b => res_or.IN1
+c => res_or.IN2
+d => res_or.IN3
+out <= res_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB3_210104004228|_2to1_mux:comb_5
+in1 => cable[0].IN0
+in2 => ~NO_FANOUT~
+select => cable[0].IN1
+out <= cable[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,8 @@
+module comb_part(
+	input [2:0] IN,
+	output [2:0] OUT,
+);
+
+
+
+endmodule

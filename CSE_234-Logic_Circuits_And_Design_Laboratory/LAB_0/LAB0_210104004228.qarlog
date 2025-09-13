@@ -1,0 +1,23 @@
+Quartus Prime Archive log --	C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/LAB0_210104004228.qarlog
+
+Archive:	C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/LAB0_210104004228.qar
+Date:		Mon Mar 13 13:49:01 2023
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/LAB0_210104004228.qpf
+C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/LAB0_210104004228.qsf
+C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/LAB0_210104004228.v
+C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/Waveform.vwf
+C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/Waveform1.vwf
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Mar 13 13:54:25 2023
+Source archive file:	C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/LAB0_210104004228.qar
+Archive was extracted into	C:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/LAB0_210104004228_restored/
+		 - successfully.

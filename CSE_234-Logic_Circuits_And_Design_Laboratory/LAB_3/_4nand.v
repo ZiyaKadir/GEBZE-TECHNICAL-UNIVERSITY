@@ -1,0 +1,15 @@
+module _4nand(
+
+	input a,
+	input b,
+	input c,
+	input d,
+	
+	output out
+
+);
+
+	nand res_nand(out, a,b,c,d);
+
+
+endmodule 

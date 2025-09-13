@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_232/LAB3_210104004228/_4nand.v
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_232/LAB3_210104004228/_4or.v
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_232/LAB3_210104004228/_2to1_mux.v
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_232/LAB3_210104004228/LAB3_210104004228.v
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_232/LAB3_210104004228/db/LAB3_210104004228.cbx.xml
+design_name = LAB3_210104004228
+instance = comp, \out~output , out~output, LAB3_210104004228, 1
+instance = comp, \select~input , select~input, LAB3_210104004228, 1
+instance = comp, \in1~input , in1~input, LAB3_210104004228, 1
+instance = comp, \in2~input , in2~input, LAB3_210104004228, 1
+instance = comp, \in3~input , in3~input, LAB3_210104004228, 1
+instance = comp, \in4~input , in4~input, LAB3_210104004228, 1
+instance = comp, \comb_5|cable[0] , comb_5|cable[0], LAB3_210104004228, 1

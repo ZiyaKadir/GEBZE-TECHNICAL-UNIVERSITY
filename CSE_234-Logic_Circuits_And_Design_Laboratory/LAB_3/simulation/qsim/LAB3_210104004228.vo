@@ -1,0 +1,155 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "04/17/2023 14:11:20"
+
+// 
+// Device: Altera 5CEBA4F23C7 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module LAB3_210104004228 (
+	in1,
+	in2,
+	in3,
+	in4,
+	select,
+	out);
+input 	in1;
+input 	in2;
+input 	in3;
+input 	in4;
+input 	select;
+output 	out;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \out~output_o ;
+wire \select~input_o ;
+wire \in1~input_o ;
+wire \in2~input_o ;
+wire \in3~input_o ;
+wire \in4~input_o ;
+wire [1:0] \comb_5|cable ;
+
+
+cyclonev_io_obuf \out~output (
+	.i(!\comb_5|cable [0]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out~output .bus_hold = "false";
+defparam \out~output .open_drain_output = "false";
+defparam \out~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \select~input (
+	.i(select),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\select~input_o ));
+// synopsys translate_off
+defparam \select~input .bus_hold = "false";
+defparam \select~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \in1~input (
+	.i(in1),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\in1~input_o ));
+// synopsys translate_off
+defparam \in1~input .bus_hold = "false";
+defparam \in1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \in2~input (
+	.i(in2),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\in2~input_o ));
+// synopsys translate_off
+defparam \in2~input .bus_hold = "false";
+defparam \in2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \in3~input (
+	.i(in3),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\in3~input_o ));
+// synopsys translate_off
+defparam \in3~input .bus_hold = "false";
+defparam \in3~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \in4~input (
+	.i(in4),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\in4~input_o ));
+// synopsys translate_off
+defparam \in4~input .bus_hold = "false";
+defparam \in4~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \comb_5|cable[0] (
+// Equation(s):
+// \comb_5|cable [0] = ( \in4~input_o  & ( ((\in1~input_o  & (\in2~input_o  & \in3~input_o ))) # (\select~input_o ) ) ) # ( !\in4~input_o  & ( \select~input_o  ) )
+
+	.dataa(!\select~input_o ),
+	.datab(!\in1~input_o ),
+	.datac(!\in2~input_o ),
+	.datad(!\in3~input_o ),
+	.datae(!\in4~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\comb_5|cable [0]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \comb_5|cable[0] .extended_lut = "off";
+defparam \comb_5|cable[0] .lut_mask = 64'h5555555755555557;
+defparam \comb_5|cable[0] .shared_arith = "off";
+// synopsys translate_on
+
+assign out = \out~output_o ;
+
+endmodule

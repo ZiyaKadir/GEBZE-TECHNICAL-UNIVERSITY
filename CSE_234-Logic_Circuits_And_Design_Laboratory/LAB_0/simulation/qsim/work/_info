@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zktok/Desktop/Quartus_CSE234/LAB0_210104004228/simulation/qsim
+vLAB0_210104004228
+Z1 !s110 1678704478
+!i10b 1
+!s100 ac3CEkB^UB=0Mo_Hh<=4;1
+IckBe9`>z4JXZgh4Ge3A>h0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1678704477
+8LAB0_210104004228.vo
+FLAB0_210104004228.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1678704478.000000
+!s107 LAB0_210104004228.vo|
+!s90 -work|work|LAB0_210104004228.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@l@a@b0_210104004228
+vLAB0_210104004228_vlg_vec_tst
+R1
+!i10b 1
+!s100 fQj=585F92d>YN2]>Jh_42
+I8K;;=XVNBNIX0DPFnTJ]h1
+R2
+R0
+w1678704476
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R5
+R6
+n@l@a@b0_210104004228_vlg_vec_tst

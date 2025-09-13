@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_CSE234/LAB1_210104004228/LAB1_210104004228.v
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_CSE234/LAB1_210104004228/LAB1_210104004228_1.v
+source_file = 1, C:/Users/zktok/Desktop/QUARTUS_CSE234/LAB1_210104004228/db/LAB1_210104004228.cbx.xml
+design_name = LAB1_210104004228_1
+instance = comp, \F~output , F~output, LAB1_210104004228_1, 1
+instance = comp, \A~input , A~input, LAB1_210104004228_1, 1
+instance = comp, \B~input , B~input, LAB1_210104004228_1, 1
+instance = comp, \C~input , C~input, LAB1_210104004228_1, 1
+instance = comp, \D~input , D~input, LAB1_210104004228_1, 1

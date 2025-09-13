@@ -1,0 +1,9 @@
+module FSM(
+
+	input i,
+	output o
+);
+
+	
+
+endmodule

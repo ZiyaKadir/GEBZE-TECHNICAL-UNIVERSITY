@@ -1,0 +1,6 @@
+module _1_bit_HA(Sum,Carry,A,B);
+input A,B;
+output Carry,Sum;
+xor G1(Sum,A,B);
+and G2(Carry,A,B);
+endmodule

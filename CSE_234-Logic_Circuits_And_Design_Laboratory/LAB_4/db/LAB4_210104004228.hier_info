@@ -1,0 +1,15 @@
+|FSM
+clk => n1~reg0.CLK
+clk => n0~reg0.CLK
+clk => odd~reg0.CLK
+clk => state~1.DATAIN
+clk => nextstate~5.DATAIN
+increase => always0.IN0
+increase => always0.IN0
+decrease => always0.IN1
+decrease => always0.IN1
+odd <= odd~reg0.DB_MAX_OUTPUT_PORT_TYPE
+n0 <= n0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+n1 <= n1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

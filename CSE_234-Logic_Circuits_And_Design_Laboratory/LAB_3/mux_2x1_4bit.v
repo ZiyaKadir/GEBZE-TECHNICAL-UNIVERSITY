@@ -1,0 +1,14 @@
+module mux_2x1_4bit(
+	input [3:0] in1,
+	input [3:0] in2,
+	input select,
+		
+	output [3:0] out
+);
+
+	mux_2x1_1bit(select, in1[0], in2[0], out[0]);
+	mux_2x1_1bit(select, in1[1], in2[1], out[1]);
+	mux_2x1_1bit(select, in1[2], in2[2], out[2]);	
+	mux_2x1_1bit(select, in1[3], in2[3], out[3]);
+
+endmodule 

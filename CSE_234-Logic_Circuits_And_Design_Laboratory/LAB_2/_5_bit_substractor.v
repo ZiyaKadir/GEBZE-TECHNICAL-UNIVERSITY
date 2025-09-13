@@ -1,0 +1,13 @@
+module _5_bit_substractor(input [4:0] A, input [4:0]B, output [4:0] Diff);
+
+wire [4:0] Carry;
+
+
+_1_bit_FA FA1(.A(A[0]), .B(~B[0]), .Cin(1'b1), .Sum(Diff[0]), .Cout(Carry[0]));
+_1_bit_FA FA2(.A(A[1]), .B(~B[1]), .Cin(Carry[0]), .Sum(Diff[1]), .Cout(Carry[1]));
+_1_bit_FA FA3(.A(A[2]), .B(~B[2]), .Cin(Carry[1]), .Sum(Diff[2]), .Cout(Carry[2]));
+_1_bit_FA FA4(.A(A[3]), .B(~B[3]), .Cin(Carry[2]), .Sum(Diff[3]), .Cout(Carry[3]));
+_1_bit_FA FA5(.A(A[4]), .B(~B[4]), .Cin(Carry[3]), .Sum(Diff[4]), .Cout(Carry[4]));
+
+
+endmodule 

@@ -1,0 +1,15 @@
+|FSM
+clk => state~5.DATAIN
+next => state.OUTPUTSELECT
+next => state.OUTPUTSELECT
+next => state.OUTPUTSELECT
+next => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+n0 <= n0.DB_MAX_OUTPUT_PORT_TYPE
+n1 <= n1.DB_MAX_OUTPUT_PORT_TYPE
+n2 <= <VCC>
+
+

@@ -1,0 +1,36 @@
+|LAB1_210104004228
+IN[0] => and1.IN0
+IN[0] => and2.IN0
+IN[0] => and3.IN0
+IN[0] => and5.IN0
+IN[0] => and4.IN0
+IN[0] => and6.IN0
+IN[0] => and7.IN0
+IN[0] => and8.IN0
+IN[1] => and1.IN1
+IN[1] => and2.IN1
+IN[1] => and4.IN1
+IN[1] => and6.IN1
+IN[1] => and3.IN1
+IN[1] => and5.IN1
+IN[1] => and7.IN1
+IN[1] => and8.IN1
+IN[2] => and1.IN2
+IN[2] => and3.IN2
+IN[2] => and4.IN2
+IN[2] => and7.IN2
+IN[2] => and2.IN2
+IN[2] => and5.IN2
+IN[2] => and6.IN2
+IN[2] => and8.IN2
+IN[3] => and2.IN3
+IN[3] => and3.IN3
+IN[3] => and4.IN3
+IN[3] => and1.IN3
+IN[3] => and5.IN3
+IN[3] => and6.IN3
+IN[3] => and7.IN3
+IN[3] => and8.IN3
+F <= total.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+
+State Machine - |FSM|state
+Name state.S3 state.S2 state.S1 state.S0 
+state.S0 0 0 0 0 
+state.S1 0 0 1 1 
+state.S2 0 1 0 1 
+state.S3 1 0 0 1 
+
+State Machine - |FSM|nextstate
+Name nextstate.S3 nextstate.S2 nextstate.S1 nextstate.S0 
+nextstate.S0 0 0 0 0 
+nextstate.S1 0 0 1 1 
+nextstate.S2 0 1 0 1 
+nextstate.S3 1 0 0 1 

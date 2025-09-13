@@ -1,0 +1,8 @@
+module decoder_3x8(input a, input b, input c, output[7:0] out);
+
+	wire notc;
+	not(notc,c);
+	_2x4_decoder(a,b,c,out[3:0]);
+	_2x4_decoder(a,b,notc,out[7:4]);
+	
+endmodule
